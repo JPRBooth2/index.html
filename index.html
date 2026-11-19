@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Volver a Disfrutar el Aula</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Prosto+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000000;
+      background-image: url('https://lh3.googleusercontent.com/d/1NcRQHq3cTkzkyBSVZrxeBCPFohKKmGLt');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      padding: 12px;
+      min-height: 100vh;
+    }
+    .brand-header {
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(8px);
+      border: 2px solid #00689D;
+      border-radius: 16px;
+      padding: 20px 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 25px rgba(0, 104, 157, 0.55);
+      text-align: center;
+    }
+    .brand-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.9));
+    }
+    .brand-title {
+      font-family: 'Prosto One', sans-serif;
+      font-size: 1.55rem;
+      color: #FFCB00;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      line-height: 1.25;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-shadow: -1.5px -1.5px 0 #000000, 1.5px -1.5px 0 #000000, -1.5px 1.5px 0 #000000, 1.5px 1.5px 0 #000000, 0px 4px 10px rgba(0, 104, 157, 0.9);
+    }
+    .brand-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      color: #ffffff;
+      letter-spacing: 0.8px;
+      margin-bottom: 0;
+      font-weight: 700;
+      background-color: #00689D;
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 1px solid #FFCB00;
+    }
+    .card-custom {
+      background-color: rgba(12, 16, 22, 0.92);
+      backdrop-filter: blur(6px);
+      border: 1.5px solid #00689D;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.75);
+    }
+    .card-section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: 'Prosto One', sans-serif;
+      color: #FFCB00;
+      letter-spacing: 0.5px;
+    }
+    .form-control, .form-select {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 1.5px solid #00689D !important;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.95rem;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: #FFCB00 !important;
+      box-shadow: 0 0 0 3px rgba(255, 203, 0, 0.3);
+    }
+    .form-select:disabled {
+      background-color: #111111 !important;
+      color: #777777 !important;
+      border-color: #333333 !important;
+    }
+    label {
+      font-family: 'Prosto One', sans-serif;
+      font-size: 0.8rem;
+      color: #FFCB00;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 3px rgba(0,0,0,0.9);
+    }
+    .btn-action {
+      border-radius: 10px;
+      padding: 14px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .btn-primary-custom {
+      background-color: #00689D;
+      border: 2px solid #FFCB00;
+      color: #ffffff;
+      transition: all 0.2s ease;
+    }
+    .btn-primary-custom:hover:not(:disabled) {
+      background-color: #FFCB00;
+      border-color: #00689D;
+      color: #000000;
+    }
+    .btn-primary-custom:disabled {
+      background-color: #1f2937;
+      border-color: #4b5563;
+      color: #9ca3af;
+    }
+    .btn-whatsapp {
+      background-color: #16a34a;
+      border: none;
+      color: #ffffff;
+    }
+    .btn-whatsapp:hover {
+      background-color: #15803d;
+      color: #ffffff;
+    }
+    .card-success-custom {
+      background: linear-gradient(135deg, rgba(0, 104, 157, 0.95) 0%, rgba(0, 0, 0, 0.96) 100%);
+      border: 2px solid #FFCB00;
+    }
+    .card-error-custom {
+      background: linear-gradient(135deg, rgba(127, 29, 29, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
+      border: 1.5px solid #FFCB00;
+    }
+    .cupo-nota {
+      font-size: 0.78rem;
+      color: #e5e7eb;
+      background: rgba(0, 104, 157, 0.25);
+      border-left: 3px solid #FFCB00;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" style="max-width: 600px;">
+    
+    <div class="brand-header">
+      <img src="https://lh3.googleusercontent.com/d/1j4si1xX6ccFqlePHADkPCJV_Blii6bqN" alt="Logo" class="brand-logo" id="imgLogo">
+      <h1 class="brand-title">VOLVER A DISFRUTAR EL AULA</h1>
+      <div class="brand-subtitle">Aprendizaje, innovación y cuidado</div>
+    </div>
+
+    <div class="card-custom card-error-custom" id="secError" style="display:none;">
+      <h6 style="color: #FFCB00; font-weight: 700; font-family: 'Prosto One'; font-size: 0.95rem;" class="mb-1">⚠️ AVISO DEL SISTEMA</h6>
+      <p class="text-white small m-0" id="txtError"></p>
+    </div>
+
+    <div class="card-custom">
+      <h5 class="card-section-title mb-3">👩‍🏫 1. IDENTIFICACIÓN DEL DOCENTE</h5>
+      <div>
+        <label for="selectDocente">Nombre del Docente *</label>
+        <select id="selectDocente" class="form-select" disabled>
+          <option value="">Cargando lista de docentes...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card-custom">
+      <h5 class="card-section-title mb-3">🏫 2. CENTRO DE TRABAJO</h5>
+      <div>
+        <label for="selectEscuela">Seleccione su Escuela *</label>
+        <select id="selectEscuela" class="form-select" disabled>
+          <option value="">Cargando lista de escuelas...</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card-custom">
+      <h5 class="card-section-title mb-3">🎯 3. ELECCIÓN DE TALLER</h5>
+      <div class="mb-2">
+        <label for="selectTaller">Seleccione el taller en el que le gustaría participar *</label>
+        <select id="selectTaller" class="form-select" disabled>
+          <option value="">Cargando talleres disponibles...</option>
+        </select>
+      </div>
+
+      <div class="cupo-nota mb-3">
+        <strong>Cupo limitado:</strong> Cada taller cuenta con un máximo de <strong>16 lugares</strong>. Una vez completado el cupo, el taller dejará de mostrarse en la lista.
+      </div>
+
+      <button id="btnGuardar" class="btn btn-primary-custom btn-action w-100 mt-2 shadow" onclick="ejecutarAccionPrincipal()" disabled>
+        💾 Registrar Participación
+      </button>
+    </div>
+
+    <div class="card-custom card-success-custom text-center" id="secConfirmacion" style="display:none;">
+      <h5 style="color: #FFCB00; font-weight: 700; font-family: 'Prosto One'; font-size: 1.05rem;" class="mb-2">✅ ¡Registro Completado!</h5>
+      <p class="text-white small mb-3" id="txtConfirmacion">Tu participación ha sido guardada correctamente.</p>
+      <a id="btnSecundario" href="#" target="_blank" class="btn btn-whatsapp btn-action w-100 shadow">
+        📲 Compartir Comprobante por WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const API_URL = 'https://script.google.com/macros/s/AKfycbzEaZpKKPwkU1DhndU6EGjRNVVKXjBCztMpu0UeUj1BDLLOlc4vhtVc885MmZTqlDlg/exec';
+
+    var enviando = false;
+    var selectDocente = document.getElementById('selectDocente');
+    var selectEscuela = document.getElementById('selectEscuela');
+    var selectTaller = document.getElementById('selectTaller');
+    var btnGuardar = document.getElementById('btnGuardar');
+
+    function inicializarApp() {
+      fetch(API_URL)
+        .then(function(response) { return response.json(); })
+        .then(function(respuesta) {
+          if (respuesta && respuesta.status === 'success') {
+            poblarSelect(selectDocente, respuesta.docentes, '-- Selecciona tu nombre --');
+            poblarSelect(selectEscuela, respuesta.escuelas, '-- Selecciona tu escuela --');
+
+            if (respuesta.talleres && respuesta.talleres.length > 0) {
+              poblarSelect(selectTaller, respuesta.talleres, '-- Selecciona un taller --');
+              selectTaller.disabled = false;
+              btnGuardar.disabled = false;
+            } else {
+              selectTaller.innerHTML = '<option value="">-- Todos los talleres han llenado su cupo (16/16) --</option>';
+              selectTaller.disabled = true;
+              btnGuardar.disabled = true;
+              mostrarError('Por el momento todos los talleres han alcanzado el límite de 16 participantes.');
+            }
+
+            selectDocente.disabled = false;
+            selectEscuela.disabled = false;
+          } else {
+            mostrarError((respuesta && respuesta.message) || 'No se pudieron cargar las listas.');
+          }
+        })
+        .catch(function(err) {
+          mostrarError('Error de conexión con la base de datos: ' + err.message);
+        });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', inicializarApp);
+    } else {
+      inicializarApp();
+    }
+
+    function poblarSelect(selectEl, lista, textoDefault) {
+      selectEl.innerHTML = '';
+      var opt0 = document.createElement('option');
+      opt0.value = '';
+      opt0.textContent = textoDefault;
+      selectEl.appendChild(opt0);
+
+      (lista || []).forEach(function(item) {
+        var opt = document.createElement('option');
+        opt.value = item;
+        opt.textContent = item;
+        selectEl.appendChild(opt);
+      });
+    }
+
+    function ejecutarAccionPrincipal() {
+      if (enviando) return;
+      ocultarMensajes();
+
+      var payload = {
+        docente: selectDocente.value.trim(),
+        escuela: selectEscuela.value.trim(),
+        taller: selectTaller.value.trim()
+      };
+
+      if (!payload.docente) return mostrarError('Por favor selecciona el nombre del docente.');
+      if (!payload.escuela) return mostrarError('Por favor selecciona la escuela.');
+      if (!payload.taller) return mostrarError('Por favor selecciona el taller en el que le gustaría participar.');
+
+      enviando = true;
+      btnGuardar.disabled = true;
+      btnGuardar.textContent = '⏳ Guardando registro...';
+
+      fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(res) {
+        enviando = false;
+        btnGuardar.textContent = '💾 Registrar Participación';
+
+        if (res && res.status === 'success') {
+          document.getElementById('txtConfirmacion').textContent = res.message;
+          var urlWhats = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(res.resumenWhatsApp || res.message);
+          document.getElementById('btnSecundario').href = urlWhats;
+          document.getElementById('secConfirmacion').style.display = 'block';
+
+          if (res.lugaresRestantes <= 0) {
+            var optEliminar = selectTaller.querySelector('option[value="' + CSS.escape(payload.taller) + '"]');
+            if (optEliminar) optEliminar.remove();
+          }
+
+          selectDocente.value = '';
+          selectEscuela.value = '';
+          selectTaller.value = '';
+
+          if (selectTaller.options.length <= 1) {
+            selectTaller.innerHTML = '<option value="">-- Todos los talleres han llenado su cupo (16/16) --</option>';
+            selectTaller.disabled = true;
+            btnGuardar.disabled = true;
+          } else {
+            btnGuardar.disabled = false;
+          }
+
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        } else {
+          btnGuardar.disabled = false;
+          mostrarError((res && res.message) || 'No se pudo completar el registro.');
+          inicializarApp();
+        }
+      })
+      .catch(function(err) {
+        enviando = false;
+        btnGuardar.disabled = false;
+        btnGuardar.textContent = '💾 Registrar Participación';
+        mostrarError('Error de conexión al guardar: ' + err.message);
+      });
+    }
+
+    function mostrarError(msg) {
+      document.getElementById('txtError').textContent = msg;
+      document.getElementById('secError').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function ocultarMensajes() {
+      document.getElementById('secError').style.display = 'none';
+      document.getElementById('secConfirmacion').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
